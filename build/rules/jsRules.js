@@ -1,4 +1,4 @@
-//const tsImportPluginFactory = require('ts-import-plugin')
+const tsImportPluginFactory = require('ts-import-plugin')
 const { resolve } = require('./../utils')
 
 module.exports = [
@@ -11,15 +11,15 @@ module.exports = [
                     transpileOnly: true,
                     useCache: true,
                     cacheDirectory: resolve('.cache-loader'),
-                    // getCustomTransformers: () => ({
-                    //     before: [
-                    //         tsImportPluginFactory({
-                    //             libraryName: 'antd',
-                    //             libraryDirectory: 'lib',
-                    //             style: true
-                    //         })
-                    //     ]
-                    // })
+                    getCustomTransformers: () => ({
+                        before: [
+                            tsImportPluginFactory({
+                                libraryName: 'antd',
+                                libraryDirectory: 'lib',
+                                style: true
+                            })
+                        ]
+                    })
                 }
             }
         ]

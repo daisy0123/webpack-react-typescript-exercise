@@ -1,6 +1,5 @@
 import * as React from 'react' 
 import { Button } from 'antd'
-import 'antd/lib/button/style/index.less'
 
 import * as styles from './index.scss'
  
