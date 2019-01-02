@@ -12,13 +12,11 @@ module.exports = [
                     useCache: true,
                     cacheDirectory: resolve('.cache-loader'),
                     getCustomTransformers: () => ({
-                        before: [
-                            tsImportPluginFactory({
-                                libraryName: 'antd',
-                                libraryDirectory: 'lib',
-                                style: true
-                            })
-                        ]
+                        before: [tsImportPluginFactory({
+                            libraryName: 'antd',
+                            libraryDirectory: 'lib',
+                            style: 'css',
+                        })]
                     })
                 }
             }
