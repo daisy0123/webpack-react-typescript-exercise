@@ -2,3 +2,4 @@ node_modules
 /dist
 /.cache-loader
 /.idea
+/.DS_Store
